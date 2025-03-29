@@ -31,6 +31,7 @@ const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
       <div class="animate font-semibold text-black dark:text-white">
         Blog
       </div>
+      {data.length > 0 ?
       <div class="space-y-4">
         {years.map(year => (
           <section class="animate space-y-4">
@@ -50,7 +51,12 @@ const years = Object.keys(posts).sort((a, b) => parseInt(b) - parseInt(a));
             </div>
           </section>
         ))}
+      </div> :
+      <div class="text-sm opacity-95 text-center py-3 px-4 pr-10 rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+        No posts yet.
       </div>
+
+      }
     </div>
   </Container>
 </PageLayout>

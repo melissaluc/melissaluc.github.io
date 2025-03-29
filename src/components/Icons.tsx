@@ -1,7 +1,7 @@
 import React from "react";
-import type { IconName } from "../types";
 
-const Icons: React.FC<{ iconName: IconName }> = ({ iconName }) => {
+
+const Icons: React.FC<{ iconName: string}> = ({ iconName }) => {
   switch (iconName) {
     case "instagram":
       return (

@@ -4,8 +4,9 @@ import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
-import { dateRange } from "@lib/utils";
+// import { dateRange } from "@lib/utils";
 import { SITE, HOME, SOCIALS } from "@consts";
+import Icons from "@components/Icons.tsx";
 
 const blog = (await getCollection("blog"))
   .filter(post => !post.data.draft)
@@ -17,48 +18,38 @@ const projects = (await getCollection("projects"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0,SITE.NUM_PROJECTS_ON_HOMEPAGE);
 
-const allwork = (await getCollection("work"))
-  .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
-  .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
+// const allwork = (await getCollection("work"))
+//   .sort((a, b) => new Date(b.data.dateStart).valueOf() - new Date(a.data.dateStart).valueOf())
+//   .slice(0,SITE.NUM_WORKS_ON_HOMEPAGE);
 
-const work = await Promise.all(
-  allwork.map(async (item) => {
-    const { Content } = await item.render();
-    return { ...item, Content };
-  })
-);
+// const work = await Promise.all(
+//   allwork.map(async (item) => {
+//     const { Content } = await item.render();
+//     return { ...item, Content };
+//   })
+// );
 
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white">
-      Hi, I'm Nano <span class="text-xl">👋🏻</span> 
+      Hi, I'm Melissa <span class="text-xl">👋</span> 
     </h4>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
           <p class="animate">
-            I am a minimal, seo friendly, accessible portfolio and blog for developers. 
-            I am an even more lightweight version of my popular theme
-            <Link href="https://github.com/markhorn-dev/astro-sphere" aria-label="Astro Sphere on Github" external>
-              Astro Sphere
-            </Link>.
-            I have a lighthouse scores of 100 across the board for performance, 
-            accesibility, best practices and SEO.
+            Welcome to my blog! 
           </p>
           <p class="animate">
-            I come packed with full type safety, a sitemap, an rss feed, markdown 
-            and mdx support (use components in your markdown) through astro integrations.
-            I am styled with tailwind and come preconfigured with light, dark and 
-            system/os theme preferences out of the box.
+            I'm mainly a <b>Python</b> and <b>JavaScript</b> enthusiast. My specialty is in <b>data & geospatial analysis</b> and <b>full stack web development</b>. I love using code to solve complex problems.
           </p>
           <p class="animate">
-            Visit
-            <Link href="https://github.com/markhorn-dev/astro-nano" aria-label="Astro Nano on Github" external>
-              Astro Nano on Github
-            </Link>
-            to fork the repository, read the docs or one-click deploy on Vercel or Netlify. 
+            My blog is a space where I share my work as a portfolio and talk about projects I'm working on.
+          </p>
+          <p class="animate">
+            Aside from coding, I have an interest in <b>digital art</b> and <b>graphic design</b>. Feel free to follow me on instagram for digital art content.
           </p>
         </article>
       </section>
@@ -72,16 +63,21 @@ const work = await Promise.all(
             See all posts
           </Link>
         </div>
-        <ul class="flex flex-col gap-4">
+        {blog.length > 0 ?
+        (<ul class="flex flex-col gap-4">
           {blog.map(post => (
             <li>
               <ArrowCard entry={post} />
             </li>
           ))}
-        </ul>
+        </ul>) :
+        (<div class="text-sm opacity-95 text-center py-3 px-4 pr-10 rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
+          No posts yet.
+        </div>)
+        }
       </section>
 
-      <section class="animate space-y-6">
+      <!-- <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
           <h5 class="font-semibold text-black dark:text-white">
             Work Experience
@@ -108,7 +104,7 @@ const work = await Promise.all(
             </li>
           ))}
         </ul>
-      </section>
+      </section> -->
 
       <section class="animate space-y-6">
         <div class="flex flex-wrap gap-y-2 items-center justify-between">
@@ -139,10 +135,11 @@ const work = await Promise.all(
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
-          {SOCIALS.map(SOCIAL => (
+          {SOCIALS.map(SOCIAL => 
+            (
             <li class="flex gap-x-2 text-nowrap">
               <Link href={SOCIAL.HREF} external aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}>
-                {SOCIAL.NAME}
+                <Icons iconName={SOCIAL.ICON}/>
               </Link>
               {"/"}
             </li>

@@ -11,7 +11,11 @@ export type Metadata = {
   DESCRIPTION: string;
 };
 
+export type IconName = "instagram" | "github" | "linkedin"
+
 export type Socials = {
   NAME: string;
   HREF: string;
+  ICON: IconName;
 }[];
+

@@ -2,6 +2,7 @@
 title: "EMME Select Link Analysis"
 description: "Python script working with multimodal transport planning software EMME Desktop API to automate select-link analysis for multiple origin-destination pairs"
 date: "May 01 2021"
+status: "completed"
 repoURL: "https://github.com/melissaluc/EmmeSelectLink"
 ---
 

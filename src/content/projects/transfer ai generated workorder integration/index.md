@@ -2,6 +2,7 @@
 title: "A.I Generated Work Order Integration"
 description: "Basic Python-based ETL pipeline to retrieve new or updated bus repair plans from the vendor system. Automated the integration process by triggering form-filling with vendor alert data and repair plans, seamlessly creating new work orders in the asset management system."
 date: "Jul 24 2023"
+status: "completed"
 repoURL: "https://github.com/melissaluc/preteckt-inforEAM"
 ---
 ![concept](./preteckt-inforEam.svg)

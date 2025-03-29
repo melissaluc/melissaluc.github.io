@@ -2,6 +2,7 @@
 title: "Transit Dashboard"
 description: "Combines open-source data from various sources to create a dashboard summarizing transit route performance and investigate potential service impacts to improve transit operations"
 date: "Mar 26 2025"
+status: "active"
 repoURL: "https://github.com/melissaluc/transit-operations-dashboard"
 ---
 

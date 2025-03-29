@@ -2,6 +2,7 @@
 title: "Regional Transit MSP Trip Connection Quality"
 description: "Python-based application on Azure Web Apps, utilizing Function Apps, ingesting and analyze GTFS data, investigating connectivity and integration between GO Transit and municipal transit systems in the GTA"
 date: "Aug 01 2022"
+status: "completed"
 repoURL: "https://github.com/markhorn-dev/astro-nano"
 ---
 ![concept](./concept.svg)

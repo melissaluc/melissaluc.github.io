@@ -2,6 +2,7 @@
 title: "Lush Cosmetic Point of Sale App"
 description: "BrainStation industry project or hackathon, with a focus on front end development, collaborating with data scientists, UI/UX designers, and software engineers 2023 cohorts to develop a conceptual point of sale app."
 date: "Oct 26 2023"
+status: "completed"
 repoURL: "https://github.com/markhorn-dev/astro-nano"
 ---
 

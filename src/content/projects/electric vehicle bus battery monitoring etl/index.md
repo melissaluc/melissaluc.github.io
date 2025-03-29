@@ -2,6 +2,7 @@
 title: "Electric Vehicle Bus Battery Monitoring ETL"
 description: "Basic Python ETL fetching vendor EV data, calculating performance metrics and writing to an Excel tracking sheet"
 date: "May 01 2023"
+status: "completed"
 repoURL: "https://github.com/melissaluc/viriciti"
 ---
 ![concept](./chargepoint-cadavl.svg)

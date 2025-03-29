@@ -2,7 +2,7 @@
 title: "Athenium Fitness Tracker App"
 description: "Designed to help users log progress, track goals with alerts, and visualize improvements through a 2D avatar linked to body measurements. It emphasizes performance over weight, integrating fitness level calculators to motivate sustainable and balanced progress"
 date: "Sept 26 2024"
-status: Active
+status: active
 demoURL: "https://atheniumfitness.com"
 repoURL: "https://github.com/melissaluc/athenium-client/tree/develop"
 ---

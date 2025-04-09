@@ -41,7 +41,7 @@ export const SOCIALS: Socials = [
   },
   { 
     NAME: "linkedin",
-    HREF: "https://linkedin.com/in/melissa-l-946b979b ",
+    HREF: "https://linkedin.com/in/melissaluc",
     ICON: "linkedin"
   }
 ];
